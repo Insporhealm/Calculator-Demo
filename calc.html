@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Calculator</title>
+    <script type="text/javascript">
+    function addNum(){
+    var first_number = parseFloat(f1.fn.value);
+    var second_number = parseFloat(f1.sn.value);
+    result = first_number + second_number;
+    f1.res.value = result;
+    }
+    function subNum(){
+    var first_number = parseFloat(f1.fn.value);
+    var second_number = parseFloat(f1.sn.value);
+    result = first_number - second_number;
+    f1.res.value = result;
+    }
+    function mulNum(){
+    var first_number = parseFloat(f1.fn.value);
+    var second_number = parseFloat(f1.sn.value);
+    result = first_number * second_number;
+    f1.res.value = result;
+    }
+    function divNum(){
+    var first_number = parseFloat(f1.fn.value);
+    var second_number = parseFloat(f1.sn.value);
+    result = first_number / second_number;
+    f1.res.value = result;
+    }
+    </script>
+</head>
+<body>
+    <h1>This is a Calculator Experiment, using javascript</h1>
+    <div class="calculator">
+    <form name="f1">
+        <table cellspacing="15px">
+            <tr>
+                <td><label for="firstNumber">First Number</label></td>
+                <td><input type="text" name="fn" value="" placeholder="Enter Number"></td>
+            </tr>
+            <tr>
+                <td><label for="secondNumber">Second Number</label></td>
+                <td><input type="text" name="sn" value="" placeholder="Enter Number"></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                <input type="button" value="+" onclick="addNum()">
+                <input type="button" value="-" onclick="subNum()">
+                <input type="button" value="*" onclick="mulNum()">
+                <input type="button" value="/" onclick="divNum()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                <input type="text" name="res" placeholder="Result is shown here">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
